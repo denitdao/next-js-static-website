@@ -5,6 +5,11 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+};
 
 export default config;
