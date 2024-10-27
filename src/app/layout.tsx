@@ -3,11 +3,13 @@ import config from "~/../next.config";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { env } from "~/env";
 
 export const metadata: Metadata = {
   title: "Static Next Demo",
   description: "How to deploy a static Next.js app to GitHub Pages",
   icons: [{ rel: "icon", url: `${config.basePath}/favicon.ico` }],
+  metadataBase: new URL(env.NEXT_PUBLIC_BASE_URL),
   openGraph: {
     title: "Static Next Demo",
     description: "How to deploy a static Next.js app to GitHub Pages",
