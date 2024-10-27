@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import config from "~/../next.config";
+import localFont from 'next/font/local'
+
+const greatVibes = localFont({ src: './GreatVibes-Regular.ttf' })
 
 export default function HomePage() {
   return (
@@ -36,6 +39,7 @@ export default function HomePage() {
             <div className="text-lg">
               This is how you use custom font files.
             </div>
+            <div className={greatVibes.className}>Freedom of thought</div>
           </div>
         </div>
       </div>
