@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import config from "~/../next.config";
 
 export default function HomePage() {
   return (
@@ -24,7 +25,7 @@ export default function HomePage() {
               This is how you show static images in your app.
             </div>
             <Image
-              src="/images/porsche.jpeg"
+              src={`${config.basePath}/images/porsche.jpeg`}
               alt="Static Image"
               width={200}
               height={200}
